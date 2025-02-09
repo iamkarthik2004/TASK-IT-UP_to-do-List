@@ -22,7 +22,7 @@ This is a simple Todo List application built using HTML, CSS, and JavaScript. Us
  [Live Link](https://iamkarthik2004.github.io/TASK-IT-UP_to-do-List)
 
  ## Website
-[Demo Video]()https://youtu.be/XXd387EBGJs
+[Demo Video](https://youtu.be/XXd387EBGJs)
  
 ## Author
 **Karthik Krishnan**
