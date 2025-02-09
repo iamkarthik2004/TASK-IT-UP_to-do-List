@@ -1,0 +1,116 @@
+body{
+    font-family: "Georgia", serif;
+    margin: 20px;
+    background-color: rgb(0, 164, 193);
+    background-image: url('candy.png');
+    background-size: 400px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 42, 0);
+    text-shadow: 2px  2px 0 rgb(0, 0, 0);
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.todo-container{
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #c4034aea;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.todo-container .entry{
+    display: flex;
+}
+
+.todo-container input[type="text"] {
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+#addButton{
+    padding: 10px 15px;
+    background-color: #068fff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    color: rgb(0, 0, 0);
+    background-color: #63cc4bfd;
+}
+
+.todo-container ul{
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    background-color: #ffffff; /* Light Gray Background */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.todo-item span {
+    flex-grow: 1;
+}
+
+.todo-item .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* General Button Styling */
+.todo-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit Button */
+.todo-item .edit-btn {
+    background-color: #ffc107;
+    color: black;
+}
+
+.todo-item .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Delete Button */
+.todo-item .delete-btn {
+    background-color: #2bca72;
+    color: rgb(0, 0, 0);
+}
+
+.todo-item .delete-btn:hover {
+    background-color: #13a4cc;
+}
+
