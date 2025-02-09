@@ -30,7 +30,7 @@ This is a simple Todo List application built using HTML, CSS, and JavaScript. Us
 ```
 
 Website
- [Live Demo](Coming Soon)
+ [Live Demo](https://iamkarthik2004.github.io/TASK-IT-UP_to-do-List)
  
 ## Author
 **Karthik Krishnan**
