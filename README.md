@@ -30,9 +30,8 @@ This is a simple Todo List application built using HTML, CSS, and JavaScript. Us
 ```
 
 Website
-
-Live Demo
-
+ [Live Demo](Coming Soon)
+ 
 ## Author
 **Karthik Krishnan**
 **SJCET PALAI**
