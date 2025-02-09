@@ -18,18 +18,7 @@ This is a simple Todo List application built using HTML, CSS, and JavaScript. Us
 3. Use the "Edit" button to modify tasks.
 4. Click "Delete" to remove a task from the list.
 
-
-
-## Project Structure
-```
-📂 Todo List
-│── index.html        # Main HTML file
-│── styles.css        # Styling for the app
-│── main.js           # JavaScript logic
-│── README.md         # Project documentation
-```
-
-Website
+## Website
  [Live Demo](https://iamkarthik2004.github.io/TASK-IT-UP_to-do-List)
  
 ## Author
