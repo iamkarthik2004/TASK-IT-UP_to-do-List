@@ -1,44 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const taskInput = document.getElementById("taskInput");
     const addButton = document.getElementById("addButton");
     const taskList = document.getElementById("taskList");
 
-    addButton.addEventListener("click", function () {
-        const taskText = taskInput.value.trim();
-        if (taskText === "") return;
+    // Add New Task - Functions
+    function addTask() {
+        let taskText = taskInput.value.trim();
+        if (!taskText) return;
 
-        const listItem = document.createElement("li");
-        listItem.className = "todo-item";
+        let taskEl = document.createElement("li");
+        taskEl.className = "todo-item";
 
-        const taskSpan = document.createElement("span");
-        taskSpan.textContent = taskText;
+        let taskTextEl = document.createElement("span");
+        taskTextEl.textContent = taskText;
 
-        const buttonContainer = document.createElement("div");
-        buttonContainer.className = "buttons"; // Wrap buttons inside a div for alignment
+        let btnContainer = document.createElement("div");
+        btnContainer.className = "buttons";
 
-        const editButton = document.createElement("button");
-        editButton.textContent = "Edit";
-        editButton.className = "edit-btn";
-        editButton.addEventListener("click", function () {
-            const newText = prompt("Edit your task:", taskSpan.textContent);
-            if (newText !== null) taskSpan.textContent = newText.trim();
-        });
+        // Editing Button Functions
+        let editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit-btn";
+        editBtn.onclick = () => {
+            let newText = prompt("Edit your task:", taskTextEl.textContent);
+            if (newText) taskTextEl.textContent = newText.trim();
+        };
 
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.className = "delete-btn";
-        deleteButton.addEventListener("click", function () {
-            taskList.removeChild(listItem);
-        });
+        // Delete Button Functions
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.onclick = () => taskList.removeChild(taskEl);
 
-        buttonContainer.appendChild(editButton);
-        buttonContainer.appendChild(deleteButton);
-
-        listItem.appendChild(taskSpan);
-        listItem.appendChild(buttonContainer);
-        taskList.appendChild(listItem);
+        btnContainer.append(editBtn, deleteBtn);
+        taskEl.append(taskTextEl, btnContainer);
+        taskList.appendChild(taskEl);
 
         taskInput.value = "";
         taskInput.focus();
+    }
+
+    // Add button event
+    addButton.addEventListener("click", addTask);
+
+    // Add New Tasks With Enter Key in Keyboard
+    taskInput.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") addTask();
     });
 });
